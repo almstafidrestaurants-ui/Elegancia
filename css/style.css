@@ -1623,3 +1623,72 @@ button {
     margin: -12px 5px 15px;
     text-align: right;
 }
+
+/* ================================================
+   الشريط السفلي الثابت — يظل ظاهراً أثناء التمرير
+   ================================================ */
+.bottom {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    width: 100% !important;
+    max-width: 430px !important;
+    z-index: 1000 !important;
+    padding-bottom: max(10px, env(safe-area-inset-bottom)) !important;
+    height: calc(88px + env(safe-area-inset-bottom)) !important;
+}
+/* نترك مساحة أسفل الصفحات كي لا يغطي الشريط المنتجات والأزرار */
+.screen {
+    padding-bottom: calc(125px + env(safe-area-inset-bottom)) !important;
+}
+/* منع تداخل الشريط مع زر إضافة المنتج وإتمام الطلب */
+.sticky-action {
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   الشريط السفلي - حجم أصغر وثابت
+   ===================================== */
+
+.bottom {
+    height: 60px !important;
+    min-height: 60px !important;
+
+    padding: 4px 6px !important;
+
+    position: fixed !important;
+    bottom: 0 !important;
+}
+
+/* تصغير أيقونات الشريط */
+.bottom .nav-icon {
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.bottom .nav-icon svg {
+    width: 21px !important;
+    height: 21px !important;
+}
+
+/* تصغير أسماء الأزرار */
+.bottom button {
+    font-size: 11px !important;
+    gap: 2px !important;
+    padding: 2px 0 !important;
+}
+
+/* تصغير رقم المنتجات بالسلة */
+.bottom .nav-count {
+    font-size: 9px !important;
+    min-width: 14px;
+    height: 14px;
+    line-height: 14px;
+}
+
+/* ترك مساحة مناسبة تحت المنتجات */
+.screen {
+    padding-bottom: 80px !important;
+}
